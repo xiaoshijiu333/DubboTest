@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="fei.mapper.CustomerMapper">
+    <!--查询所有客户-->
+    <select id="getAllCustomer" resultMap="BaseResultMap">
+       select cust_id, cust_name, cust_profession, cust_phone, email from customer
+    </select>
+    <resultMap id="BaseResultMap" type="fei.model.Customer">
+        <id column="cust_id" property="custId"/>
+        <result column="cust_name" property="custName"/>
+        <result column="cust_profession" property="custProfession"/>
+        <result column="cust_phone" property="custPhone"/>
+        <result column="email" property="custEmail"/>
+    </resultMap>
+</mapper>
