@@ -30,7 +30,7 @@ public class CustomerServicesImpl implements CustomerServices {
     public PageInfo<Customer> getAllCustomer(BasePage basePage) {
         PageHelper.startPage(basePage.getPageNum(),basePage.getPageSize());
         List<Customer> customers = customerMapper.getAllCustomer();
-        PageInfo<Customer> pageInfo = new PageInfo<Customer>(customers);
+        PageInfo<Customer> pageInfo = new PageInfo<>(customers);
         return pageInfo;
     }
 }
