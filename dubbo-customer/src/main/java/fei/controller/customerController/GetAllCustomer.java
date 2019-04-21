@@ -10,8 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import static fei.utils.ApiResult.succ;
-
 /**
  * @author xiaoshijiu
  * @location DubboTest/fei
