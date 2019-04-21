@@ -17,16 +17,28 @@
 
 
     <dependencies>
+        <!--dubbo-interface-->
+        <dependency>
+            <groupId>com.fei</groupId>
+            <artifactId>dubbo-interface</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.fei</groupId>
+                    <artifactId>dubbo-common</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
         <!--dubbo-config-->
         <dependency>
             <groupId>com.fei</groupId>
             <artifactId>dubbo-config</artifactId>
         </dependency>
 
-        <!--dubbo-interface-->
+        <!--dubbo-common-->
         <dependency>
             <groupId>com.fei</groupId>
-            <artifactId>dubbo-interface</artifactId>
+            <artifactId>dubbo-common</artifactId>
         </dependency>
 
         <!-- servlet-api -->
