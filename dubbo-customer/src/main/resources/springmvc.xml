@@ -13,5 +13,9 @@
     <!--静态资源访问-->
     <mvc:default-servlet-handler/>
 
+    <!--swagger-->
+    <mvc:resources mapping="swagger-ui.html" location="classpath:/META-INF/resources/" />
+    <mvc:resources mapping="/webjars/**"
+                   location="classpath:/META-INF/resources/webjars/" />
 
 </beans>
