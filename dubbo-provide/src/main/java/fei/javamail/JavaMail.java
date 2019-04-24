@@ -43,7 +43,7 @@ public class JavaMail {
      * @params: toAddress收件人地址
      * @params: mailContex邮件内容
      */
-    public static void SendMail(String toAddress, StringBuilder mailContext) throws Exception {
+    public static void sendMail(String toAddress, StringBuilder mailContext) throws Exception {
 
         Properties properties = new Properties();
         //设置参数配置，由于连接邮件服务器
