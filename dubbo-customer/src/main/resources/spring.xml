@@ -17,4 +17,7 @@
     <!--加载Dubbo配置文件-->
     <import resource="classpath:spring-dubbo.xml"/>
 
+    <!--加载Shiro配置文件-->
+    <import resource="classpath:spring-shiro.xml"/>
+
 </beans>
