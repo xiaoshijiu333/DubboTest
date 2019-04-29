@@ -21,12 +21,14 @@
         <dependency>
             <groupId>com.fei</groupId>
             <artifactId>dubbo-config</artifactId>
+            <version>1.0</version>
         </dependency>
 
         <!--dubbo-interface-->
         <dependency>
             <groupId>com.fei</groupId>
             <artifactId>dubbo-interface</artifactId>
+            <version>1.0</version>
             <exclusions>
                 <exclusion>
                     <groupId>com.fei</groupId>
@@ -43,6 +45,7 @@
         <dependency>
             <groupId>com.fei</groupId>
             <artifactId>dubbo-common</artifactId>
+            <version>1.0</version>
         </dependency>
 
         <!--junit-->

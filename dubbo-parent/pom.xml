@@ -22,26 +22,6 @@
 
     <dependencyManagement>
         <dependencies>
-            <!--dubbo-config-->
-            <dependency>
-                <groupId>com.fei</groupId>
-                <artifactId>dubbo-config</artifactId>
-                <version>1.0</version>
-            </dependency>
-
-            <!--dubbo-interface-->
-            <dependency>
-                <groupId>com.fei</groupId>
-                <artifactId>dubbo-interface</artifactId>
-                <version>1.0</version>
-            </dependency>
-
-            <!--dubbo-common-->
-            <dependency>
-                <groupId>com.fei</groupId>
-                <artifactId>dubbo-common</artifactId>
-                <version>1.0</version>
-            </dependency>
 
             <!--单元测试-->
             <dependency>
@@ -295,6 +275,8 @@
         <module>../dubbo-common</module>
         <module>../dubbo-interface</module>
         <module>../dubbo-config</module>
+        <module>../dubbo-customer</module>
+        <module>../dubbo-provide</module>
     </modules>
 
 </project>

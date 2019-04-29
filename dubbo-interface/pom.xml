@@ -4,11 +4,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 
-    <groupId>com.fei</groupId>
     <artifactId>dubbo-interface</artifactId>
-    <version>1.0</version>
     <modelVersion>4.0.0</modelVersion>
     <packaging>jar</packaging>
+
+    <parent>
+        <artifactId>dubbo-parent</artifactId>
+        <groupId>com.fei</groupId>
+        <version>1.0</version>
+        <relativePath>../dubbo-parent/pom.xml</relativePath>
+    </parent>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -27,7 +32,6 @@
         <dependency>
             <groupId>com.github.pagehelper</groupId>
             <artifactId>pagehelper</artifactId>
-            <version>5.0.0</version>
         </dependency>
     </dependencies>
 
