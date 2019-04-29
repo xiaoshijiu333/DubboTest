@@ -15,7 +15,7 @@ import java.io.Serializable;
  */
 
 @Setter @Getter @ToString
-public class Customer implements Serializable {
+public class CustomerModel implements Serializable {
     private Integer custId;
     private String custName;
     private String custProfession;

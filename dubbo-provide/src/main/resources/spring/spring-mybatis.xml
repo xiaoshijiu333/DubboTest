@@ -38,11 +38,11 @@
         <!-- 核心配置文件的位置 -->
         <property name="configLocation" value="classpath:mybatis/sqlMapConfig.xml"/>
         <!--配置mapper映射文件的路径-->
-        <property name="mapperLocations" value="classpath:fei.mapper/CustomerMapper.xml"/>
+        <property name="mapperLocations" value="classpath:fei/mapper/*.xml"/>
     </bean>
 
     <!-- 配置Mapper接口扫描 -->
-    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+    <bean class="tk.mybatis.spring.mapper.MapperScannerConfigurer">
         <!-- 配置Mapper扫描包 -->
         <property name="basePackage" value="fei.mapper" />
     </bean>

@@ -1,7 +1,7 @@
 package fei;
 
 import com.github.pagehelper.PageInfo;
-import fei.model.Customer;
+import fei.model.CustomerModel;
 import fei.utils.BasePage;
 
 
@@ -15,5 +15,5 @@ public interface CustomerServices {
     /**
      * @function: 查询所有客户
      */
-    PageInfo<Customer> getAllCustomer(BasePage basePage);
+    PageInfo<CustomerModel> getAllCustomer(BasePage basePage);
 }

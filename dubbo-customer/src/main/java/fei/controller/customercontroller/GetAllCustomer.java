@@ -1,9 +1,9 @@
-package fei.controller.customerController;
+package fei.controller.customercontroller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.github.pagehelper.PageInfo;
 import fei.CustomerServices;
-import fei.model.Customer;
+import fei.model.CustomerModel;
 import fei.utils.ApiResult;
 import fei.utils.BasePage;
 import io.swagger.annotations.Api;
@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @location DubboTest/fei
  * @date 2019/4/16
  */
-@Api(value = "Customer—Api")
+@Api(value = "CustomerModel—Api")
 @RestController
 @RequestMapping("/Customer")
 public class GetAllCustomer {
@@ -31,9 +31,9 @@ public class GetAllCustomer {
      */
     @ApiOperation(value = "查询所有客户")
     @RequestMapping(value = "/getAllCustomer", method = RequestMethod.GET)
-    public ApiResult<Customer> getAllCustomer(BasePage basePage) {
-        PageInfo<Customer> allCustomer = customerServices.getAllCustomer(basePage);
-        ApiResult<Customer> succ = ApiResult.succ(allCustomer.getList());
+    public ApiResult<CustomerModel> getAllCustomer(BasePage basePage) {
+        PageInfo<CustomerModel> allCustomer = customerServices.getAllCustomer(basePage);
+        ApiResult<CustomerModel> succ = ApiResult.succ(allCustomer.getList());
         return succ;
     }
 }

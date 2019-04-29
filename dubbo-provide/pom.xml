@@ -16,6 +16,21 @@
     <name>dubbo-provide</name>
 
 
+    <properties>
+        <!-- MyBatis Generator -->
+
+        <!-- Java接口和实体类 -->
+        <targetJavaProject>${basedir}/src/main/java</targetJavaProject>
+        <!-- mapper接口的生成位置 -->
+        <targetMapperPackage>fei.mapper</targetMapperPackage>
+        <!-- 实体类的生成位置 -->
+        <targetModelPackage>fei.entity</targetModelPackage>
+
+        <!-- MyBatis Generator mapper.xml生成位置 -->
+        <targetResourcesProject>${basedir}/src/main/resources</targetResourcesProject>
+        <targetXMLPackage>fei.mapper</targetXMLPackage>
+    </properties>
+
     <dependencies>
         <!--dubbo-config-->
         <dependency>
@@ -156,6 +171,18 @@
             <artifactId>mybatis-spring</artifactId>
         </dependency>
 
+        <!--tk.mybatis/mapper -->
+        <dependency>
+            <groupId>tk.mybatis</groupId>
+            <artifactId>mapper</artifactId>
+        </dependency>
+
+        <!--mybatis-generator-core -->
+        <dependency>
+            <groupId>org.mybatis.generator</groupId>
+            <artifactId>mybatis-generator-core</artifactId>
+        </dependency>
+
         <!--slf4j-api-->
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -188,6 +215,10 @@
                 <exclusion>
                     <groupId>org.springframework</groupId>
                     <artifactId>spring</artifactId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>spring-beans</artifactId>
+                    <groupId>org.springframework</groupId>
                 </exclusion>
             </exclusions>
         </dependency>
@@ -234,6 +265,31 @@
                     <port>8881</port>
                     <path>/</path>
                 </configuration>
+            </plugin>
+
+            <!--同样mapper自动生成插件-->
+            <plugin>
+                <groupId>org.mybatis.generator</groupId>
+                <artifactId>mybatis-generator-maven-plugin</artifactId>
+                <version>1.3.2</version>
+                <configuration>
+                    <configurationFile>${basedir}/src/main/resources/generator/generatorConfig.xml</configurationFile>
+                    <!--是否覆盖已经存在的文件-->
+                    <overwrite>true</overwrite>
+                    <verbose>true</verbose>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>mysql</groupId>
+                        <artifactId>mysql-connector-java</artifactId>
+                        <version>5.1.21</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>tk.mybatis</groupId>
+                        <artifactId>mapper</artifactId>
+                        <version>3.3.8</version>
+                    </dependency>
+                </dependencies>
             </plugin>
         </plugins>
     </build>
