@@ -18,7 +18,7 @@ public class JavaEmail {
     public void mailTest(){
         StringBuilder context = new StringBuilder("在吗在吗？？？这是一个测试。");
         try {
-            JavaMail.sendMail("884341537@qq.com", context);
+            JavaMail.sendMail("384115451@qq.com", context);
             log.info("发送成功");
         } catch (Exception e) {
             log.error(e.getMessage());
