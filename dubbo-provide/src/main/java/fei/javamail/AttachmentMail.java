@@ -75,7 +75,7 @@ public class AttachmentMail {
          */
         mimeMessage.setRecipient(MimeMessage.RecipientType.TO, new InternetAddress(toAddress, "周宇", "UTF-8"));
         //设置自己为抄送人可以避免 网易 554 垃圾 识别
-        mimeMessage.setRecipient(MimeMessage.RecipientType.CC, new InternetAddress(toAddress, "小诗酒", "UTF-8"));
+        mimeMessage.setRecipient(MimeMessage.RecipientType.CC, new InternetAddress(MAIL_ADDRESS, "小诗酒", "UTF-8"));
 
         //设置邮件主题
         mimeMessage.setSubject("周宇先生");
