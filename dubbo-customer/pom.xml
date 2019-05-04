@@ -236,7 +236,14 @@
             <groupId>io.springfox</groupId>
             <artifactId>springfox-spring-web</artifactId>
         </dependency>
-        
+
+        <!-- poi导出Excel -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+        </dependency>
+
+
     </dependencies>
 
     <build>
