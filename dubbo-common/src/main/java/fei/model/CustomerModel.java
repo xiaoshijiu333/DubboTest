@@ -16,6 +16,7 @@ import java.io.Serializable;
 
 @Setter @Getter @ToString
 public class CustomerModel implements Serializable {
+    private static final long serialVersionUID = 1L;
     private Integer custId;
     private String custName;
     private String custProfession;

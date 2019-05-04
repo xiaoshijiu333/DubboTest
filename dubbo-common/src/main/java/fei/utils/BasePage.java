@@ -8,6 +8,9 @@ import java.io.Serializable;
  * @date 2019/4/16
  */
 public class BasePage implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     //当前页
     private Integer pageNum;
     //总页数
