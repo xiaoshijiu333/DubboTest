@@ -41,7 +41,7 @@ public class CustomerServicesImpl implements CustomerServices {
 
         //使用通用mapper查询
         Example e = new Example(Customer.class);
-        e.createCriteria().andEqualTo("custProfession", "法师");
+        //e.createCriteria().andEqualTo("custProfession", "法师");
         List<Customer> customers = customerMapper.selectByExample(e);
 
         log.warn("通用Mapper查询结果：");
